@@ -1,0 +1,212 @@
+@font-face {
+    font-family: "Inter";
+    src: url(./assets/fonts/Inter-Medium.ttf);
+}@font-face {
+    font-family: "InterSemi";
+    src: url(./assets/fonts/Inter-SemiBold.ttf);
+}:root{
+    --color1: #e9e9e9;
+    --color2: #0066ff;
+    --bg: #303030;
+    --color3: #0000007a;
+}*{
+    padding: 5px;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
+
+body{
+    background: var(--bg);
+    color: var(--color1);
+    height: 100vh;
+    padding: 0;
+    overflow: hidden;
+}
+nav{
+    display: grid;
+    grid-template-columns: 30% 70%;
+}
+nav h2{
+    font-size: 1.2rem;
+    width: 100%;
+}
+nav ul{
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    list-style: none;
+    width: 100%;
+}
+nav ul li{
+    font-size: .9rem;
+    width: 100%;
+    text-align: right;
+}
+.header{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    width: 100%;
+    height: 70%;
+}
+.header .header-left{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    margin: auto;
+    padding: 0;
+}
+.header-left-container{
+    width: 100%;
+    padding: 0;
+}
+.header-left-container h1{
+    font-size: 3.3rem;
+    font-family: "InterSemi";
+    padding: 0;
+}
+.header-left-container h3{
+    font-size: 1.2rem;
+    color: var(--color2);
+    font-family: "InterSemi";
+    padding: 0%;
+}
+.header-left-container p{
+    font-size: 0.8rem;
+    padding: 4px 0%;
+}
+.header .header-right{
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#modem{
+    width: 80%;
+}
+.infos{
+    background: var(--color3);
+    border-radius: 5px;
+    display: grid;
+    grid-template-columns: 33% 66%;
+    padding: 0;
+}
+.infos-left{
+   width: 100%;
+}
+.infos-left h3{
+   font-size: 1.1rem; 
+}
+.infos-left .btn-container{
+    display: grid;
+    gap: 4px;
+    margin: 0 5px;
+    padding: 0;
+}
+.btn-container button{
+    border-radius: 10px;
+    border: none;
+    background: var(--color2);
+    color: var(--color1);
+    font-size: 0.7rem;
+    cursor: pointer;
+    width: 130px;
+    padding: 7px;
+}
+.infos-right{
+    width: 100%;
+}
+.infos-right h3{
+    font-size: 1.1rem;
+}
+.investors{
+    height: 80%;
+    display: grid;
+    align-items: center;
+}
+.infos-right .img-container{
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+}
+.infos-right .img-container img{
+    width: 70px;
+    height: auto;
+}
+/* *************MEDIA QUERIES************ 
+*/
+@media screen and (max-width:900px){
+    .header-left-container h1{
+        font-size: 2.7rem;
+    }
+    #modem{
+        width: 100%;
+    }
+}
+@media screen and (max-width:714px){
+    .header-left-container h1{
+        font-size: 2.2rem;
+    }
+    #modem{
+        width: 100%;
+    }
+}
+@media screen and (max-width:587px){
+    .header-left-container h1{
+        font-size: 1.7rem;
+    }
+    #modem{
+        width: 100%;
+    }
+    .infos-left h3{
+        padding: 3px 2px;
+        font-size: 1rem
+    }
+    .infos-right h3{
+        padding: 3px 2px;
+        font-size: 1rem
+    }
+}
+@media screen and (max-width:500px){
+    .header{
+        grid-template-columns: none;
+        text-align: center;
+        height: 57%;
+    }
+    .header .header-right{
+        height: 100%;
+        margin: 0;
+    }
+    #modem{
+        width: 50%;
+    }
+    .infos{
+        grid-template-columns: none;
+        justify-content: center;
+    }
+    .infos-left h3{
+        text-align: center;
+    }
+    .infos-left .btn-container{
+        justify-content: center;
+    }
+    .btn-container button{
+        font-size: .5rem;
+        padding: 5px;
+        width: 100px;
+    }
+    .infos-right h3{
+        text-align: center;
+    }
+    .infos-right .img-container{
+        grid-template-columns:none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .infos-right .img-container img{
+        width: 14%;
+        margin: 0 auto;
+    }
+}
