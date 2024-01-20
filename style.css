@@ -15,13 +15,36 @@
     box-sizing: border-box;
     font-family: "Inter", sans-serif;
 }
-
 body{
     background: var(--bg);
     color: var(--color1);
     height: 100vh;
     padding: 0;
     overflow: hidden;
+    position: relative;
+    /* cursor: none; pour js */
+}
+.cursor{
+    border-radius: 1400px;
+    display: block;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    mix-blend-mode: difference;
+}
+#circle{
+    width: 20px;
+    height: 20px;
+    background: yellow;
+}
+#circle2{
+    width: 100px;
+    height: 100px;
+    background: pink;
+}
+#circle3{
+    width: 200px;
+    height: 200px;
+    background: #080808;
 }
 nav{
     display: grid;
@@ -41,6 +64,12 @@ nav ul li{
     font-size: .9rem;
     width: 100%;
     text-align: right;
+    cursor: pointer;
+    position: relative; /*Pour Js*/
+    z-index: 1000; /*Pour Js*/
+}
+nav ul li:hover{
+    color: var(--color2);
 }
 .header{
     display: grid;
@@ -133,6 +162,32 @@ nav ul li{
 .infos-right .img-container img{
     width: 70px;
     height: auto;
+}
+
+/* POUR le Javascript */
+.big{
+    width: 20px;
+    height: 20px;
+    background: rgb(25, 0, 255);
+}
+.medium{
+    width: 100px;
+    height: 100px;
+    background: rgb(236, 236, 236);
+    /* transition: 0.2s ease; */
+}
+.small{
+    width: 200px;
+    height: 200px;
+    background: rgb(27, 27, 27);
+    /* transition: 0.3s ease; */
+}
+.big, .medium, .small{
+    border-radius: 170px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    mix-blend-mode: difference;
+    /* z-index: -1; */
 }
 /* *************MEDIA QUERIES************ 
 */
